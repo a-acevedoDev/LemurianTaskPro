@@ -1,23 +1,28 @@
 package com.example.lemuriantaskpro.model;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Task {
     private String name;
     private String description;
-    private LocalDateTime create_at;
-    private LocalDateTime complete_at;
+    private Date create_at;
+    private Date complete_at;
     private Boolean completed;
+    private int priority;
 
     public Task() {
+        this.create_at = new Date();
+        this.completed = false;
+        this.priority = 3;
     }
 
-    public Task(String name, String description, LocalDateTime create_at, LocalDateTime complete_at, Boolean completed) {
+    public Task(String name, String description, Date create_at, Date complete_at, Boolean completed, int priority) {
         this.name = name;
         this.description = description;
         this.create_at = create_at;
         this.complete_at = complete_at;
         this.completed = completed;
+        this.priority = priority;
     }
 
     public String getName() {
@@ -36,19 +41,19 @@ public class Task {
         this.description = description;
     }
 
-    public LocalDateTime getCreate_at() {
+    public Date getCreate_at() {
         return create_at;
     }
 
-    public void setCreate_at(LocalDateTime create_at) {
+    public void setCreate_at(Date create_at) {
         this.create_at = create_at;
     }
 
-    public LocalDateTime getComplete_at() {
+    public Date getComplete_at() {
         return complete_at;
     }
 
-    public void setComplete_at(LocalDateTime complete_at) {
+    public void setComplete_at(Date complete_at) {
         this.complete_at = complete_at;
     }
 
@@ -58,5 +63,13 @@ public class Task {
 
     public void setCompleted(Boolean completed) {
         this.completed = completed;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
     }
 }

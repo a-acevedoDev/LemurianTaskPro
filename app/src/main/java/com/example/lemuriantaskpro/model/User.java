@@ -27,4 +27,8 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public boolean validateCredentials(String username, String password) {
+        return this.username.equals(username) && this.password.equals(password);
+    }
 }
