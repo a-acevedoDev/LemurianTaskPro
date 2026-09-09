@@ -20,6 +20,8 @@ public class Task {
     public Task(String name, String description, int priority) {
         this.name = name;
         this.description = description;
+        this.create_at = new Date();
+        this.completed = false;
         this.priority = priority;
     }
 
