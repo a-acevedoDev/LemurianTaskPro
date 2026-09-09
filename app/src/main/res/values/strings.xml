@@ -35,4 +35,18 @@
     <string name="main_filter_low">Baja</string>
     <string name="main_add_button">Agregar Tarea</string>
     <string name="main_empty_list">No hay tareas</string>
+
+    <string name="detail_title_add">Nueva Tarea</string>
+    <string name="detail_title_edit">Editar Tarea</string>
+    <string name="detail_title_hint">Título</string>
+    <string name="detail_description_hint">Descripción</string>
+    <string name="detail_priority_label">Prioridad</string>
+    <string name="detail_priority_low">Baja</string>
+    <string name="detail_priority_medium">Media</string>
+    <string name="detail_priority_high">Alta</string>
+    <string name="detail_completed_label">Completada</string>
+    <string name="detail_save_button">Guardar</string>
+    <string name="detail_cancel_button">Cancelar</string>
+    <string name="detail_error_title">El título es obligatorio</string>
+    <string name="detail_error_priority">Selecciona una prioridad</string>
 </resources>
