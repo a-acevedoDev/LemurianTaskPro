@@ -3,6 +3,7 @@ package com.example.lemuriantaskpro.model;
 import java.util.Date;
 
 public class Task {
+    private int id;
     private String name;
     private String description;
     private Date create_at;
@@ -16,13 +17,28 @@ public class Task {
         this.priority = 3;
     }
 
-    public Task(String name, String description, Date create_at, Date complete_at, Boolean completed, int priority) {
+    public Task(String name, String description, int priority) {
+        this.name = name;
+        this.description = description;
+        this.priority = priority;
+    }
+
+    public Task(int id, String name, String description, Date create_at, Date complete_at, Boolean completed, int priority) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.create_at = create_at;
         this.complete_at = complete_at;
         this.completed = completed;
         this.priority = priority;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
