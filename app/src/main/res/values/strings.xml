@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">LemurianTaskPro</string>
+
+    <string name="login_title">Lemurian Task Pro</string>
+    <string name="login_subtitle">Iniciar Sesión</string>
+    <string name="login_username_hint">Usuario</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="login_register_link">¿No tienes cuenta? Regístrate</string>
+    <string name="login_error_empty">Completa todos los campos</string>
+    <string name="login_error_credentials">Credenciales incorrectas</string>
+
+    <string name="register_title">Lemurian Task Pro</string>
+    <string name="register_subtitle">Crear Cuenta</string>
+    <string name="register_username_hint">Usuario</string>
+    <string name="register_password_hint">Contraseña</string>
+    <string name="register_confirm_hint">Confirmar Contraseña</string>
+    <string name="register_button">Registrarse</string>
+    <string name="register_login_link">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="register_error_empty">Completa todos los campos</string>
+    <string name="register_error_password">Las contraseñas no coinciden</string>
+    <string name="register_error_exists">El usuario ya existe</string>
+    <string name="register_success">Usuario registrado exitosamente</string>
+
+    <string name="welcome_title">Lemurian Task Pro</string>
+    <string name="welcome_greeting">¡Bienvenido!</string>
+    <string name="welcome_subtitle">Organiza tus tareas de manera eficiente</string>
+    <string name="welcome_button">Comenzar</string>
+
+    <string name="main_title">Mis Tareas</string>
+    <string name="main_filter_hint">Filtrar por prioridad</string>
+    <string name="main_filter_all">Todas</string>
+    <string name="main_filter_high">Alta</string>
+    <string name="main_filter_medium">Media</string>
+    <string name="main_filter_low">Baja</string>
+    <string name="main_add_button">Agregar Tarea</string>
+    <string name="main_empty_list">No hay tareas</string>
 </resources>
