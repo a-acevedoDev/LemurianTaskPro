@@ -23,11 +23,6 @@ public class TaskManager {
     }
 
     private void addSampleTasks() {
-        taskList.add(new Task("Comprar pan", "Ir al supermercado", 3));
-        taskList.add(new Task("Estudiar Android", "Repasar RecyclerView", 5));
-        taskList.add(new Task("Hacer ejercicio", "30 minutos de cardio", 4));
-        taskList.add(new Task("Leer libro", "Leer 20 páginas", 2));
-        taskList.add(new Task("Llamar a mamá", "Preguntar por su salud", 5));
     }
 
     public List<Task> getAllTasks() {
@@ -57,6 +52,7 @@ public class TaskManager {
                 return;
             }
         }
+        addTask(updatedTask);
     }
 
     public void deleteTask(int id) {

@@ -20,6 +20,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     private Context context;
     private List<Task> taskList;
     private OnTaskClickListener listener;
+    private boolean isBinding = false; // Bandera
 
     public interface OnTaskClickListener {
         void onTaskClick(Task task);
@@ -43,10 +44,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
         Task task = taskList.get(position);
 
+        isBinding = true;
+
         holder.tvTitle.setText(task.getName());
         holder.tvDescription.setText(task.getDescription());
         holder.rbPriority.setRating(task.getPriority());
         holder.cbCompleted.setChecked(task.getCompleted());
+
+        isBinding = false;
 
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) {
@@ -55,6 +60,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         });
 
         holder.cbCompleted.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isBinding) {
+                return;
+            }
+
             if (listener != null) {
                 task.setCompleted(isChecked);
                 listener.onCheckBoxClick(task, position);
